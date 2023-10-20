@@ -1,0 +1,91 @@
+.sidebar {
+  background: #f1f2f6;
+  min-width: fit-content;
+  height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    div {
+      margin: 0 2rem 0 1rem;
+      p {
+        color: #5a6474;
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 22px;
+      }
+
+      span {
+        color: #404d61;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 22px;
+      }
+    }
+
+    button {
+      border-radius: 5px;
+      border: none;
+      background: #fff;
+      padding: 7.5px 13px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3.6rem;
+
+    a {
+      border-radius: 5px;
+      padding: 1rem 1.5rem;
+      color: #757d8a;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 22px;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      &:hover,
+      &.active {
+        background: #fff;
+      }
+    }
+  }
+
+  .sign-out {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: #757d8a;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 22px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+
+    &:hover,
+    &:active {
+      background: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}

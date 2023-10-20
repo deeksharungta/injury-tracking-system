@@ -1,0 +1,54 @@
+.container {
+  padding: 14vw 0 0 9vw;
+  height: 100vh;
+  margin-right: 2rem;
+
+  h1 {
+    color: #5b6ad0;
+    font-size: 6.4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    color: #000;
+    font-size: 6.4rem;
+    font-weight: 700;
+    max-width: 100rem;
+  }
+
+  p {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 2rem 0;
+    max-width: 110rem;
+    margin-bottom: 4rem;
+  }
+
+  a:link,
+  a:visited {
+    border-radius: 10px;
+    background: #5b6ad0;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1.2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .container {
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 150%;
+    }
+  }
+}

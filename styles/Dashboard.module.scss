@@ -1,0 +1,26 @@
+.inner-container {
+  margin: 0 3rem;
+  h2 {
+    margin-right: auto;
+    color: #404d61;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 4rem 0;
+  }
+  // .center {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  .flex-row {
+    display: flex;
+
+    .flex-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+// }
