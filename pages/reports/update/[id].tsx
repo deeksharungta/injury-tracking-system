@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import styles from "@/styles/CreateReport.module.scss";
 
-interface Injuries {
+type Injuries = {
   [key: string]: string;
-}
+};
 
 type ReportType = {
   id: number;

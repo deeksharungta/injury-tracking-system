@@ -82,10 +82,9 @@
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 900px) {
   .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
+    width: 0;
+    display: none;
   }
 }

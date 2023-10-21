@@ -20,7 +20,7 @@ export default async function handler(
 
     const userId = userDetails.id;
     const { name, injuryDate, injuries } = req.body;
-    console.log(name, injuryDate, injuries);
+
     try {
       const newProject = await prisma.report.create({
         data: {

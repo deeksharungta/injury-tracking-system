@@ -53,10 +53,10 @@
   }
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 900px) {
   .container {
     .heading {
-      font-size: 2rem;
+      font-size: 2.6rem;
     }
 
     .search-input {
@@ -69,6 +69,24 @@
     a:visited {
       padding: 1rem 1rem;
       margin-left: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 3rem;
+    align-items: flex-start;
+
+    .search-input {
+      width: 100%;
+    }
+
+    a:link,
+    a:visited {
+      margin-left: 0;
     }
   }
 }

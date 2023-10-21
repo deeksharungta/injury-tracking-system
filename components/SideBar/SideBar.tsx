@@ -8,7 +8,11 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function SideBar() {
+type SidebarProps = {
+  showSidebar: boolean;
+};
+
+const SideBar: React.FC<SidebarProps> = ({ showSidebar }) => {
   const { user } = useUser();
   const router = useRouter();
 
@@ -18,7 +22,10 @@ export default function SideBar() {
       : str ?? "";
 
   return (
-    <div className={styles.sidebar}>
+    <div
+      className={styles.sidebar}
+      style={{ display: `${showSidebar ? "flex" : ""}` }}
+    >
       <div className={styles.title}>
         <div>
           <p>Welcome back,</p>
@@ -47,4 +54,6 @@ export default function SideBar() {
       </Link>
     </div>
   );
-}
+};
+
+export default SideBar;

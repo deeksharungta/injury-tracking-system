@@ -1,5 +1,4 @@
 import ReportForm from "@/components/Form/ReportForm";
-import SideBar from "@/components/SideBar/SideBar";
 import styles from "@/styles/CreateReport.module.scss";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useRouter } from "next/router";

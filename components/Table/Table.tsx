@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Table.module.scss";
 import {
   EditOutlined,
@@ -32,7 +32,6 @@ const Table: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
       name: "asc",
       dateOfInjury: "asc",
       dateOfReport: "asc",
-      injuries: "asc",
     }
   );
   const [filterVisible, setFilterVisible] = useState(false);
@@ -91,7 +90,6 @@ const Table: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
       router.push(`reports/update/${id}`);
     } catch (error) {
       toast.error("Report update failed");
-      console.error("Report update failed", error);
     }
   };
 
@@ -108,15 +106,12 @@ const Table: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
       if (response.ok) {
         const updatedData = data.filter((item) => item.id !== id);
         setData(updatedData);
-        toast.success(`Report with ID ${id} deleted successfully`);
-        console.log(`Report with ID ${id} deleted successfully`);
+        toast.success(`Report deleted successfully`);
       } else {
         toast.error("Error deleting report");
-        console.error("Error deleting report");
       }
     } catch (error) {
       toast.error("Error deleting report");
-      console.error("Error deleting report", error);
     }
   };
 
@@ -224,17 +219,8 @@ const Table: React.FC<{ searchTerm: string }> = ({ searchTerm }) => {
                   />
                 )}
               </th>
-              <th onClick={() => handleSort("injuries")}>
+              <th>
                 <span>Injuries</span>
-                {sortOrder.injuries === "asc" ? (
-                  <CaretDownOutlined
-                    style={{ fontSize: "12px", color: "#B1B1B1" }}
-                  />
-                ) : (
-                  <CaretUpOutlined
-                    style={{ fontSize: "12px", color: "#B1B1B1" }}
-                  />
-                )}
               </th>
               <th>Actions</th>
             </tr>

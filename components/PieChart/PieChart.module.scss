@@ -16,7 +16,15 @@
   }
 
   canvas {
-    width: 32rem;
-    height: fit-content;
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 744px) {
+  .container {
+    canvas {
+      width: 28rem;
+    }
   }
 }

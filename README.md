@@ -55,7 +55,7 @@ The Injury Tracking System is a web application designed for organizations, such
 
 ### Back-end:
 
-- RestAPI with Prisma as the ORM.
+- Prisma as the ORM.
 - PostgreSQL database.
 
 ### Authentication:
@@ -86,16 +86,7 @@ The Injury Tracking System is a web application designed for organizations, such
 
 ## Deployment
 
-The application is deployed on [Vercel]().
-
-### Reviewer Access
-
-For the convenience of the reviewers, here are test login credentials:
-
-- **Username:** test@test.com
-- **Password:** test123
-
-These credentials are provided to facilitate a smooth review process and are not intended for actual user authentication.
+The application is deployed on [Vercel](https://injury-tracking-system-one.vercel.app/).
 
 ## Code Structure
 
@@ -111,6 +102,7 @@ The codebase is organized as follows:
   - PieChart.tsx
   - SideBar.tsx
   - Table.tsx
+  - Modal.tsx
 
 - **/pages:** Next.js pages for different routes.
 

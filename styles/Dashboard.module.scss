@@ -1,26 +1,36 @@
 .inner-container {
-  margin: 0 3rem;
+  overflow-y: auto;
+  height: 100vh;
+
   h2 {
-    margin-right: auto;
     color: #404d61;
     font-size: 2.8rem;
     font-weight: 700;
-    line-height: 22px;
-    margin: 4rem 0;
+    line-height: 140%;
+    margin: 3rem auto 3rem 3rem;
   }
-  // .center {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
+  .center {
+    width: fit-content;
+    margin: auto;
 
-  .flex-row {
-    display: flex;
-
-    .flex-column {
+    .flex-row {
       display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      justify-content: center;
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
-// }
+
+@media only screen and (max-width: 744px) {
+  .inner-container {
+    .center {
+      .flex-row {
+        flex-direction: column;
+      }
+    }
+  }
+}

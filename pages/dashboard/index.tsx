@@ -15,15 +15,17 @@ const Dashboard = () => {
     return (
       <div className={styles["inner-container"]}>
         <h2>Dashboard</h2>
-        <div className={styles["flex-row"]}>
-          <BarGraph />
-          <div className={styles["flex-column"]}>
-            <InjuriesReported identifier="you" />
-            <InjuriesReported identifier="total" />
+        <div className={styles.center}>
+          <div className={styles["flex-row"]}>
+            <BarGraph />
           </div>
-        </div>
-        <div className={styles["flex-row"]}>
-          <DonutChart />
+          <div className={styles["flex-row"]}>
+            <DonutChart />
+            <div className={styles["flex-column"]}>
+              <InjuriesReported identifier="you" />
+              <InjuriesReported identifier="total" />
+            </div>
+          </div>
         </div>
       </div>
     );

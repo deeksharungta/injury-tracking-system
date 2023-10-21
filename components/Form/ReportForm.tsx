@@ -6,26 +6,26 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-interface Injuries {
+type Injuries = {
   [key: string]: string;
-}
+};
 
-interface ReportFormProps {
+type ReportFormProps = {
   data?: {
     id: number;
     name: string;
     dateOfInjury: string;
     injuries: Injuries;
   };
-}
+};
 
 const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
   const { user } = useUser();
   const router = useRouter();
   const [name, setName] = useState<string>("");
   const [dateOfInjury, setDateOfInjury] = useState<string>("");
-  const [injuryDate, setInjuryDate] = useState<string>("");
   const [injuries, setInjuries] = useState<Injuries>({});
+  const [injuryDate, setInjuryDate] = useState<string>("");
 
   useEffect(() => {
     if (data) {
@@ -42,11 +42,10 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
   const handleDateOfInjuryChange = (event: ChangeEvent<HTMLInputElement>) => {
     const inputDate = new Date(event.target.value);
     setDateOfInjury(event.target.value);
-    console.log(dateOfInjury);
+
     if (!isNaN(inputDate.getTime())) {
       const isoDateTime = inputDate.toISOString();
       setInjuryDate(isoDateTime);
-      console.log(injuryDate);
     } else {
       console.error("Invalid date input");
     }
@@ -80,7 +79,6 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
       Object.keys(injuries).length === 0
     ) {
       toast.error("Please enter all the details");
-      console.log("Please enter all the details");
     } else {
       if (data) {
         updateReport(data.id);
@@ -107,10 +105,8 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
 
     if (response.ok) {
       toast.success("Report created successfully");
-      console.log("Success");
     } else {
       toast.error("Error creating report");
-      console.log("Error creating report");
     }
   };
 
@@ -129,10 +125,8 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
 
     if (response.ok) {
       toast.success("Report updated successfully");
-      console.log("Success");
     } else {
       toast.error("Error updating report");
-      console.log("Error updating report");
     }
   };
 

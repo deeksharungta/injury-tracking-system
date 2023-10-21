@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import styles from "./InjuriesReported.module.scss";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
-interface InjuriesReportedProps {
+type InjuriesReportedProps = {
   identifier: string;
-}
+};
 
 const InjuriesReported: React.FC<InjuriesReportedProps> = ({ identifier }) => {
   const { user } = useUser();

@@ -28,7 +28,6 @@ export default async function handler(
 
       res.status(200).json(updatedReport);
     } catch (error) {
-      console.error(error);
       res
         .status(500)
         .json({ error: "Error occurred while updating the report." });

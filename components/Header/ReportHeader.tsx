@@ -3,9 +3,9 @@ import styles from "./ReportHeader.module.scss";
 import { SearchOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
-interface ReportHeaderProps {
+type ReportHeaderProps = {
   onSearch: (term: string) => void;
-}
+};
 
 const ReportHeader: React.FC<ReportHeaderProps> = ({ onSearch }) => {
   const [searchInput, setSearchInput] = useState("");
