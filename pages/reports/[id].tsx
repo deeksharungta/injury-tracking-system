@@ -55,20 +55,20 @@ const ViewReport = () => {
     return (
       <div className={styles["inner-container"]}>
         <h2>View Injury Details</h2>
-        <p>
+        <h3>
           Name: <p>{reportData.name}</p>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Date of Injury:{" "}
           <p>{new Date(reportData.dateOfInjury).toLocaleString()}</p>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Date of Report:{" "}
           <p>{new Date(reportData.dateOfReport).toLocaleString()}</p>
-        </p>
-        <p>
+        </h3>
+        <h3>
           Injuries: <p>{formatInjuries()}</p>
-        </p>
+        </h3>
       </div>
     );
   } else {
