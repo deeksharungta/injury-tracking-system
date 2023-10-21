@@ -20,13 +20,15 @@ export default async function handler(
     }
 
     const userId = userDetails.id;
-    const { name, injuryDate, injuries } = req.body;
+
+    const { name, dateOfInjury, injuries } = req.body;
+    const isoDateTime = new Date(dateOfInjury).toISOString();
 
     try {
       const newProject = await prisma.report.create({
         data: {
           name,
-          dateOfInjury: injuryDate,
+          dateOfInjury: isoDateTime,
           injuries,
           userId: userId,
         },

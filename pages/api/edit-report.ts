@@ -15,14 +15,16 @@ export default async function handler(
         return res.status(400).json({ error: "Invalid report ID" });
       }
 
-      const { name, injuryDate, injuries } = req.body;
+      const { name, dateOfInjury, injuries } = req.body;
+      const isoDateTime = new Date(dateOfInjury).toISOString();
+
       const updatedReport = await prisma.report.update({
         where: {
           id: id,
         },
         data: {
           name,
-          dateOfInjury: injuryDate,
+          dateOfInjury: isoDateTime,
           injuries,
         },
       });

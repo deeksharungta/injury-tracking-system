@@ -25,7 +25,6 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
   const [name, setName] = useState<string>("");
   const [dateOfInjury, setDateOfInjury] = useState<string>("");
   const [injuries, setInjuries] = useState<Injuries>({});
-  const [injuryDate, setInjuryDate] = useState<string>("");
 
   useEffect(() => {
     if (data) {
@@ -40,15 +39,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
   };
 
   const handleDateOfInjuryChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const inputDate = new Date(event.target.value);
     setDateOfInjury(event.target.value);
-
-    if (!isNaN(inputDate.getTime())) {
-      const isoDateTime = inputDate.toISOString();
-      setInjuryDate(isoDateTime);
-    } else {
-      console.error("Invalid date input");
-    }
   };
 
   const handleBodyPartClick = (partName: string) => {
@@ -98,7 +89,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
       body: JSON.stringify({
         user,
         name,
-        injuryDate,
+        dateOfInjury,
         injuries,
       }),
     });
@@ -118,7 +109,7 @@ const ReportForm: React.FC<ReportFormProps> = ({ data }) => {
       },
       body: JSON.stringify({
         name,
-        injuryDate,
+        dateOfInjury,
         injuries,
       }),
     });
