@@ -86,7 +86,7 @@ The Injury Tracking System is a web application designed for organizations, such
 
 ## Deployment
 
-The application is deployed on [Vercel](https://injury-tracking-system-one.vercel.app/).
+The application is deployed on [Vercel](https://injury-tracking-system-two.vercel.app/).
 
 ## Code Structure
 
