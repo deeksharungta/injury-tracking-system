@@ -47,11 +47,11 @@ const SideBar: React.FC<SidebarProps> = ({ showSidebar }) => {
           <FileTextOutlined style={{ fontSize: "16px", color: "#757D8A" }} />
           Reports
         </Link>
+        <Link href=" /api/auth/logout" className={styles["sign-out"]}>
+          <PoweroffOutlined style={{ fontSize: "16px", color: "#757D8A" }} />
+          Sign Out
+        </Link>
       </nav>
-      <Link href=" /api/auth/logout" className={styles["sign-out"]}>
-        <PoweroffOutlined style={{ fontSize: "16px", color: "#757D8A" }} />
-        Sign Out
-      </Link>
     </div>
   );
 };
