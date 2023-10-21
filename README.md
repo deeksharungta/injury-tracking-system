@@ -121,4 +121,4 @@ The codebase is organized as follows:
 
 - **/styles:** Stylesheets for styling components.
 
-- **.env.local:** Environment configuration file
+- **.env:** Environment configuration file
